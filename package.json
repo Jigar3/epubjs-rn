@@ -48,7 +48,7 @@
     "babel-plugin-static-fs": "3.0.0",
     "babel-plugin-transform-inline-environment-variables": "0.4.3",
     "gulp": "4.0.2",
-    "metro-react-native-babel-preset": "0.59.0",
+    "metro-react-native-babel-preset": "0.66.0",
     "babel-jest": "24.8.0",
     "jest": "24.8.0",
     "react-test-renderer": "16.11.0"
