@@ -13,7 +13,7 @@ import {
 import { WebView } from 'react-native-webview';
 
 import EventEmitter from 'event-emitter'
-
+import TouchableDebounce from './TouchableDebounce';
 import AsyncStorage from '@react-native-community/async-storage';
 
 const URL = require("epubjs/libs/url/url-polyfill.js");
@@ -413,7 +413,7 @@ class Rendition extends Component {
 
   render() {
     let loader = (
-      <TouchableOpacity onPress={() => this.props.onPress('')} style={styles.loadScreen}>
+      <TouchableDebounce onPress={() => this.props.onPress('')} style={styles.loadScreen}>
         <View style={[styles.loadScreen, {
             backgroundColor: this.props.backgroundColor || "#FFFFFF"
           }]}>
@@ -423,7 +423,7 @@ class Rendition extends Component {
                 style={{ flex: 1 }}
               />
         </View>
-      </TouchableOpacity>
+      </TouchableDebounce>
     );
 
     if (!this.props.url) {
