@@ -1,6 +1,7 @@
-import React, {PureComponent,TouchableOpacity,PropTypes} from "react";
+import React, {PureComponent, TouchableOpacity } from "react";
 import { debounce } from "lodash";
 import { ViewPropTypes } from "react-native";
+import PropTypes from "prop-types";
 
 //PureComponent handles shouldComponentUpdate for you.
 class TouchableDebounce extends React.PureComponent {
