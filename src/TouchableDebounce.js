@@ -1,6 +1,6 @@
-import React, {PureComponent, TouchableOpacity } from "react";
+import React from "react";
+import { ViewPropTypes, TouchableOpacity } from "react-native";
 import { debounce } from "lodash";
-import { ViewPropTypes } from "react-native";
 import PropTypes from "prop-types";
 
 //PureComponent handles shouldComponentUpdate for you.
