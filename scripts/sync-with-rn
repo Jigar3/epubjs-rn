@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+npm run build
+
+rsync -av --progress ./ ../anotherOne/node_modules/\@jigar3/epubjs-rn/ --exclude node_modules --exclude .git --exclude .vscode --exclude src > /dev/null

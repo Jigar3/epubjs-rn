@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { StyleSheet, Dimensions, AppState } from "react-native";
 import Orientation from "@lightbase/react-native-orientation";
-import RNFetchBlob from "rn-fetch-blob";
+import ReactNativeBlobUtil from "react-native-blob-util";
 import AsyncStorage from "@react-native-community/async-storage";
 
 if (!global.Blob) {
-  global.Blob = RNFetchBlob.polyfill.Blob;
+  global.Blob = ReactNativeBlobUtil.polyfill.Blob;
 }
 
 global.JSZip = global.JSZip || require("jszip");
@@ -246,7 +246,7 @@ class Epub extends Component {
       this.props.onNavigationReady && this.props.onNavigationReady(nav.toc);
     });
 
-    if (this.props.generateLocations != false) {
+    if (this.props.generateLocations == true) {
       this.loadLocations().then((locations) => {
         this.rendition.setLocations(locations);
         // this.rendition.reportLocation();
